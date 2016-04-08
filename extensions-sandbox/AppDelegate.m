@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SchemaChannel.h"
 
 @interface AppDelegate ()
 
@@ -14,12 +15,29 @@
 
 @implementation AppDelegate
 
+-(void)applicationWillFinishLaunching:(NSNotification *)notification {
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self
+                                                       andSelector:@selector(handleGetURLEvent:withReplyEvent:)
+                                                     forEventClass:kInternetEventClass
+                                                        andEventID:kAEGetURL];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass
+                                                                        andEventID:kAEGetURL];
+}
+
+- (void)handleGetURLEvent:(NSAppleEventDescriptor *)event
+           withReplyEvent:(NSAppleEventDescriptor *)replyEvent {
+    NSString* url = [[event paramDescriptorForKeyword:keyDirectObject]
+                     stringValue];
+    
+    
+    [[SchemaChannel channel] publish:url];
 }
 
 @end
