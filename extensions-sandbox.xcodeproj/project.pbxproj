@@ -19,6 +19,7 @@
 		A75A32E21CB687A300F259A5 /* share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A75A32D31CB687A300F259A5 /* share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A75A32E71CB687C700F259A5 /* extensions-sandbox-icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */; };
 		A75A32EA1CB6A09600F259A5 /* SchemaChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32E91CB6A09600F259A5 /* SchemaChannel.m */; };
+		A7CD2C6E1CB7C34100F0EFC2 /* toolbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7CD2C6D1CB7C34100F0EFC2 /* toolbar-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = "extensions-sandbox-icon.iconset"; sourceTree = "<group>"; };
 		A75A32E81CB6A09600F259A5 /* SchemaChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaChannel.h; sourceTree = "<group>"; };
 		A75A32E91CB6A09600F259A5 /* SchemaChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaChannel.m; sourceTree = "<group>"; };
+		A7CD2C6D1CB7C34100F0EFC2 /* toolbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		A75A32C11CB6879800F259A5 /* finder-sync */ = {
 			isa = PBXGroup;
 			children = (
+				A7CD2C6D1CB7C34100F0EFC2 /* toolbar-icon.png */,
 				A75A32C41CB6879800F259A5 /* FinderSync.h */,
 				A75A32C51CB6879800F259A5 /* FinderSync.m */,
 				A75A32C71CB6879800F259A5 /* Info.plist */,
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CD2C6E1CB7C34100F0EFC2 /* toolbar-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

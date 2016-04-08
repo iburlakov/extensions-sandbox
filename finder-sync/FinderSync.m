@@ -71,7 +71,7 @@ NSString *pathToMonitor = @"/Users/iburlakov/experiments";
 }
 
 - (NSImage *)toolbarItemImage {
-    return [NSImage imageNamed:NSImageNameCaution];
+    return [NSImage imageNamed:@"toolbar-icon.png"];
 }
 
 //- (void)sampleAction {
