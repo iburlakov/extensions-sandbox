@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController {
+    
+    __weak IBOutlet NSTextField *logTextField;
+}
 
 
 @end

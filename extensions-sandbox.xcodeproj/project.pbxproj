@@ -12,7 +12,46 @@
 		A75A32B01CB6878B00F259A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32AF1CB6878B00F259A5 /* ViewController.m */; };
 		A75A32B21CB6878B00F259A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75A32B11CB6878B00F259A5 /* Assets.xcassets */; };
 		A75A32B51CB6878B00F259A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75A32B31CB6878B00F259A5 /* Main.storyboard */; };
+		A75A32C61CB6879800F259A5 /* FinderSync.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32C51CB6879800F259A5 /* FinderSync.m */; };
+		A75A32CA1CB6879800F259A5 /* finder-sync.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A75A32C01CB6879800F259A5 /* finder-sync.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A75A32DB1CB687A300F259A5 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32DA1CB687A300F259A5 /* ShareViewController.m */; };
+		A75A32DE1CB687A300F259A5 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75A32DC1CB687A300F259A5 /* ShareViewController.xib */; };
+		A75A32E21CB687A300F259A5 /* share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A75A32D31CB687A300F259A5 /* share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A75A32E71CB687C700F259A5 /* extensions-sandbox-icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */; };
+		A75A32EA1CB6A09600F259A5 /* SchemaChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32E91CB6A09600F259A5 /* SchemaChannel.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A75A32C81CB6879800F259A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75A329D1CB6878B00F259A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75A32BF1CB6879800F259A5;
+			remoteInfo = "finder-sync";
+		};
+		A75A32E01CB687A300F259A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A75A329D1CB6878B00F259A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75A32D21CB687A300F259A5;
+			remoteInfo = share;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A75A32CE1CB6879800F259A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A75A32E21CB687A300F259A5 /* share.appex in Embed App Extensions */,
+				A75A32CA1CB6879800F259A5 /* finder-sync.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A75A32A51CB6878B00F259A5 /* extensions-sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "extensions-sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +63,38 @@
 		A75A32B11CB6878B00F259A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75A32B41CB6878B00F259A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A75A32B61CB6878B00F259A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75A32C01CB6879800F259A5 /* finder-sync.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "finder-sync.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75A32C31CB6879800F259A5 /* finder_sync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = finder_sync.entitlements; sourceTree = "<group>"; };
+		A75A32C41CB6879800F259A5 /* FinderSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderSync.h; sourceTree = "<group>"; };
+		A75A32C51CB6879800F259A5 /* FinderSync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderSync.m; sourceTree = "<group>"; };
+		A75A32C71CB6879800F259A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75A32D31CB687A300F259A5 /* share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75A32D81CB687A300F259A5 /* share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = share.entitlements; sourceTree = "<group>"; };
+		A75A32D91CB687A300F259A5 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		A75A32DA1CB687A300F259A5 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		A75A32DD1CB687A300F259A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		A75A32DF1CB687A300F259A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = "extensions-sandbox-icon.iconset"; sourceTree = "<group>"; };
+		A75A32E81CB6A09600F259A5 /* SchemaChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaChannel.h; sourceTree = "<group>"; };
+		A75A32E91CB6A09600F259A5 /* SchemaChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaChannel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A75A32A21CB6878B00F259A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A32BD1CB6879800F259A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A32D01CB687A300F259A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				A75A32A71CB6878B00F259A5 /* extensions-sandbox */,
+				A75A32C11CB6879800F259A5 /* finder-sync */,
+				A75A32D41CB687A300F259A5 /* share */,
 				A75A32A61CB6878B00F259A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				A75A32A51CB6878B00F259A5 /* extensions-sandbox.app */,
+				A75A32C01CB6879800F259A5 /* finder-sync.appex */,
+				A75A32D31CB687A300F259A5 /* share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +127,7 @@
 		A75A32A71CB6878B00F259A5 /* extensions-sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */,
 				A75A32A81CB6878B00F259A5 /* AppDelegate.h */,
 				A75A32A91CB6878B00F259A5 /* AppDelegate.m */,
 				A75A32AE1CB6878B00F259A5 /* ViewController.h */,
@@ -64,6 +136,8 @@
 				A75A32B31CB6878B00F259A5 /* Main.storyboard */,
 				A75A32B61CB6878B00F259A5 /* Info.plist */,
 				A75A32AB1CB6878B00F259A5 /* Supporting Files */,
+				A75A32E81CB6A09600F259A5 /* SchemaChannel.h */,
+				A75A32E91CB6A09600F259A5 /* SchemaChannel.m */,
 			);
 			path = "extensions-sandbox";
 			sourceTree = "<group>";
@@ -72,6 +146,45 @@
 			isa = PBXGroup;
 			children = (
 				A75A32AC1CB6878B00F259A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A75A32C11CB6879800F259A5 /* finder-sync */ = {
+			isa = PBXGroup;
+			children = (
+				A75A32C41CB6879800F259A5 /* FinderSync.h */,
+				A75A32C51CB6879800F259A5 /* FinderSync.m */,
+				A75A32C71CB6879800F259A5 /* Info.plist */,
+				A75A32C21CB6879800F259A5 /* Supporting Files */,
+			);
+			path = "finder-sync";
+			sourceTree = "<group>";
+		};
+		A75A32C21CB6879800F259A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A75A32C31CB6879800F259A5 /* finder_sync.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A75A32D41CB687A300F259A5 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				A75A32D91CB687A300F259A5 /* ShareViewController.h */,
+				A75A32DA1CB687A300F259A5 /* ShareViewController.m */,
+				A75A32DC1CB687A300F259A5 /* ShareViewController.xib */,
+				A75A32DF1CB687A300F259A5 /* Info.plist */,
+				A75A32D51CB687A300F259A5 /* Supporting Files */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		A75A32D51CB687A300F259A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A75A32D81CB687A300F259A5 /* share.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -86,15 +199,52 @@
 				A75A32A11CB6878B00F259A5 /* Sources */,
 				A75A32A21CB6878B00F259A5 /* Frameworks */,
 				A75A32A31CB6878B00F259A5 /* Resources */,
+				A75A32CE1CB6879800F259A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A75A32C91CB6879800F259A5 /* PBXTargetDependency */,
+				A75A32E11CB687A300F259A5 /* PBXTargetDependency */,
 			);
 			name = "extensions-sandbox";
 			productName = "extensions-sandbox";
 			productReference = A75A32A51CB6878B00F259A5 /* extensions-sandbox.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A75A32BF1CB6879800F259A5 /* finder-sync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75A32CB1CB6879800F259A5 /* Build configuration list for PBXNativeTarget "finder-sync" */;
+			buildPhases = (
+				A75A32BC1CB6879800F259A5 /* Sources */,
+				A75A32BD1CB6879800F259A5 /* Frameworks */,
+				A75A32BE1CB6879800F259A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "finder-sync";
+			productName = "finder-sync";
+			productReference = A75A32C01CB6879800F259A5 /* finder-sync.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A75A32D21CB687A300F259A5 /* share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75A32E31CB687A300F259A5 /* Build configuration list for PBXNativeTarget "share" */;
+			buildPhases = (
+				A75A32CF1CB687A300F259A5 /* Sources */,
+				A75A32D01CB687A300F259A5 /* Frameworks */,
+				A75A32D11CB687A300F259A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = share;
+			productName = share;
+			productReference = A75A32D31CB687A300F259A5 /* share.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +256,12 @@
 				ORGANIZATIONNAME = "Ivan Burlakov";
 				TargetAttributes = {
 					A75A32A41CB6878B00F259A5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A75A32BF1CB6879800F259A5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A75A32D21CB687A300F259A5 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -124,6 +280,8 @@
 			projectRoot = "";
 			targets = (
 				A75A32A41CB6878B00F259A5 /* extensions-sandbox */,
+				A75A32BF1CB6879800F259A5 /* finder-sync */,
+				A75A32D21CB687A300F259A5 /* share */,
 			);
 		};
 /* End PBXProject section */
@@ -134,7 +292,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75A32B21CB6878B00F259A5 /* Assets.xcassets in Resources */,
+				A75A32E71CB687C700F259A5 /* extensions-sandbox-icon.iconset in Resources */,
 				A75A32B51CB6878B00F259A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A32BE1CB6879800F259A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A32D11CB687A300F259A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A32DE1CB687A300F259A5 /* ShareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,13 +319,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75A32EA1CB6A09600F259A5 /* SchemaChannel.m in Sources */,
 				A75A32B01CB6878B00F259A5 /* ViewController.m in Sources */,
 				A75A32AD1CB6878B00F259A5 /* main.m in Sources */,
 				A75A32AA1CB6878B00F259A5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A75A32BC1CB6879800F259A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A32C61CB6879800F259A5 /* FinderSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A32CF1CB687A300F259A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A32DB1CB687A300F259A5 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A75A32C91CB6879800F259A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75A32BF1CB6879800F259A5 /* finder-sync */;
+			targetProxy = A75A32C81CB6879800F259A5 /* PBXContainerItemProxy */;
+		};
+		A75A32E11CB687A300F259A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75A32D21CB687A300F259A5 /* share */;
+			targetProxy = A75A32E01CB687A300F259A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A75A32B31CB6878B00F259A5 /* Main.storyboard */ = {
@@ -160,6 +364,14 @@
 				A75A32B41CB6878B00F259A5 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A75A32DC1CB687A300F259A5 /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A75A32DD1CB687A300F259A5 /* Base */,
+			);
+			name = ShareViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,6 +480,58 @@
 			};
 			name = Release;
 		};
+		A75A32CC1CB6879800F259A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "finder-sync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.finder-sync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A75A32CD1CB6879800F259A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "finder-sync/finder_sync.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "finder-sync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.finder-sync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A75A32E41CB687A300F259A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = share/share.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A75A32E51CB687A300F259A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = share/share.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -287,6 +551,25 @@
 				A75A32BB1CB6878B00F259A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75A32CB1CB6879800F259A5 /* Build configuration list for PBXNativeTarget "finder-sync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75A32CC1CB6879800F259A5 /* Debug */,
+				A75A32CD1CB6879800F259A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75A32E31CB687A300F259A5 /* Build configuration list for PBXNativeTarget "share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75A32E41CB687A300F259A5 /* Debug */,
+				A75A32E51CB687A300F259A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

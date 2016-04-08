@@ -7,13 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "SchemaChannel.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view.
+    [[SchemaChannel channel] subscribe:^(NSString *arg) {
+        [logTextField setStringValue:[logTextField.stringValue stringByAppendingString:[NSString stringWithFormat:@"\n%@", arg]]];
+    }];
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {
