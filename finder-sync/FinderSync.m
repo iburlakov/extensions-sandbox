@@ -31,8 +31,9 @@ NSString *pathToMonitor = @"/Users/iburlakov/experiments";
     NSLog(@"started monitoring %@", pathToMonitor);
     
     // Set up images for our badge identifiers. For demonstration purposes, this uses off-the-shelf images.
-    //[[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: NSImageNameColorPanel] label:@"Status One" forBadgeIdentifier:@"One"];
-    //[[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: NSImageNameCaution] label:@"Status Two" forBadgeIdentifier:@"Two"];
+    [[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: @"H-ico"] label:@"H" forBadgeIdentifier:@"H"];
+    [[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: @"M-ico"] label:@"M" forBadgeIdentifier:@"M"];
+    [[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: @"NA-ico"] label:@"NA" forBadgeIdentifier:@"NA"];
     
     return self;
 }
@@ -55,10 +56,17 @@ NSString *pathToMonitor = @"/Users/iburlakov/experiments";
 - (void)requestBadgeIdentifierForURL:(NSURL *)url {
     NSLog(@"requestBadgeIdentifierForURL:%@", url.filePathURL);
     
-    // For demonstration purposes, this picks one of our two badges, or no badge at all, based on the filename.
-    NSInteger whichBadge = [url.filePathURL hash] % 3;
-    NSString* badgeIdentifier = @[@"", @"One", @"Two"][whichBadge];
-    [[FIFinderSyncController defaultController] setBadgeIdentifier:badgeIdentifier forURL:url];
+    BOOL isDir;
+    [[NSFileManager defaultManager] fileExistsAtPath:url.path isDirectory:&isDir];
+    if (!isDir) {
+        if ([url.path hasSuffix:@".h"]) {
+            [[FIFinderSyncController defaultController] setBadgeIdentifier:@"H" forURL:url];
+        } else if ([url.path hasSuffix:@".m"]) {
+            [[FIFinderSyncController defaultController] setBadgeIdentifier:@"M" forURL:url];
+        } else {
+            [[FIFinderSyncController defaultController] setBadgeIdentifier:@"NA" forURL:url];
+        }
+    }
 }
 
 #pragma mark - Menu and toolbar item support
