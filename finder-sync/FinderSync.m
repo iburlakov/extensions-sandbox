@@ -16,21 +16,26 @@
 
 @implementation FinderSync
 
+NSString *pathToMonitor = @"/Users/iburlakov/experiments";
+
 - (instancetype)init {
     self = [super init];
 
     NSLog(@"%s launched from %@ ; compiled at %s", __PRETTY_FUNCTION__, [[NSBundle mainBundle] bundlePath], __TIME__);
 
     // Set up the directory we are syncing.
-    self.myFolderURL = [NSURL fileURLWithPath:[@"/experiments" stringByExpandingTildeInPath]];
+    self.myFolderURL = [NSURL fileURLWithPath:pathToMonitor];
     [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:self.myFolderURL];
 
+    NSLog(@"started monitoring %@", pathToMonitor);
+    
     // Set up images for our badge identifiers. For demonstration purposes, this uses off-the-shelf images.
     //[[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: NSImageNameColorPanel] label:@"Status One" forBadgeIdentifier:@"One"];
     //[[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed: NSImageNameCaution] label:@"Status Two" forBadgeIdentifier:@"Two"];
     
     return self;
 }
+
 
 #pragma mark - Primary Finder Sync protocol methods
 
@@ -69,7 +74,43 @@
     return [NSImage imageNamed:NSImageNameCaution];
 }
 
+//- (void)sampleAction {
+//    NSAlert *alert = [[NSAlert alloc] init];
+//    alert.messageText = @"alert";
+//    [alert runModal];
+//}
+
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {
+    NSLog(@"menuForMenuKind");
+    // toolbar
+    if (FIMenuKindToolbarItemMenu == whichMenu) {
+        NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
+        
+        // do not support multi-select
+        NSArray* selectedItems = [[FIFinderSyncController defaultController] selectedItemURLs];
+        
+        if (selectedItems.count > 0) {
+            NSURL *url = selectedItems[0];
+            NSString *path = url.filePathURL.path;
+            
+            if ([path hasPrefix:pathToMonitor]) {
+                [menu addItemWithTitle:@"sample menu item" action:@selector(sampleAction:) keyEquivalent:@""];
+
+            
+                return  menu;
+            }
+            
+        }
+
+        // in case of no selection, multiselect, non-monitored file/folder or not running client
+        NSMenuItem *sub = [[NSMenuItem alloc] initWithTitle:@"No actions to perform" action:nil keyEquivalent:@""];
+        [sub setEnabled:NO];
+        [menu addItem:sub];
+        
+        return menu;
+    }
+
+    
     // Produce a menu for the extension.
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
     [menu addItemWithTitle:@"Example Menu Item" action:@selector(sampleAction:) keyEquivalent:@""];
