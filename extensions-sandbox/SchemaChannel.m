@@ -36,9 +36,8 @@ SchemaChannel *_channel;
 - (void)publish:(NSString *)message {
     NSString *schema = @"EXTSANDBOX://"; // TODO: move to shared code
 
-    NSString *decodedMessage = [[message substringFromIndex:schema.length-1] stringByRemovingPercentEncoding];
-    
-    
+    NSString *decodedMessage = [[message substringFromIndex:schema.length] stringByRemovingPercentEncoding];
+
     
     for (void (^ block)(NSString *arg) in subscriptions) {
         if (block) {

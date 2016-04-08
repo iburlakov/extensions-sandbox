@@ -16,6 +16,7 @@
 
 @implementation FinderSync
 
+// TODO: should be shared code
 NSString *pathToMonitor = @"/Users/iburlakov/experiments";
 
 - (instancetype)init {

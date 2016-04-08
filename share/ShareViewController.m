@@ -43,31 +43,22 @@
     
     
    
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@", schema, [url.path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@", schema,
+                                       
+                                       [dataToSend.stringValue stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]]]];
 
 
-    //NSLog(@"Sending: %@", url);
-    
-    [self.extensionContext openURL:url completionHandler:^(BOOL success) {
-        if (success){
-            NSLog(@"OK");
-        } else { NSLog(@"FAILED");}
-        
-        NSExtensionItem *outputItem = [[NSExtensionItem alloc] init];
-        
-        NSArray *outputItems = @[outputItem];
-        [self.extensionContext completeRequestReturningItems:outputItems completionHandler:nil];
-    }];
-    
+    NSLog(@"Sending: %@", url);
+    BOOL s = [[NSWorkspace sharedWorkspace] openURL:url];
+    if (s){
+        NSLog(@"OK");
+        [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
+    } else {
+        NSLog(@"FAILED");
+        [dataToSend setStringValue:[dataToSend.stringValue stringByAppendingString:@"\nFAILED TO SEND"]];
 
-    
-    
-    //BOOL res = ([[NSWorkspace sharedWorkspace] openURL:url]);
-   //    } else {
-//
-//
-//       [dataToSend setStringValue:[dataToSend.stringValue stringByAppendingString:@"FAILED TO SEND DATA"]];
-//    }
+    }
+    // TODO: add method of adding string to textfield
 }
 
 - (IBAction)cancel:(id)sender {

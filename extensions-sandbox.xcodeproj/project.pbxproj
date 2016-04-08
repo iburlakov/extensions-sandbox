@@ -20,6 +20,7 @@
 		A75A32E71CB687C700F259A5 /* extensions-sandbox-icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */; };
 		A75A32EA1CB6A09600F259A5 /* SchemaChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = A75A32E91CB6A09600F259A5 /* SchemaChannel.m */; };
 		A7CD2C6E1CB7C34100F0EFC2 /* toolbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7CD2C6D1CB7C34100F0EFC2 /* toolbar-icon.png */; };
+		A7CD2C701CB7C9C200F0EFC2 /* extensions-folder-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A7CD2C6F1CB7C9C200F0EFC2 /* extensions-folder-icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A75A32E81CB6A09600F259A5 /* SchemaChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaChannel.h; sourceTree = "<group>"; };
 		A75A32E91CB6A09600F259A5 /* SchemaChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaChannel.m; sourceTree = "<group>"; };
 		A7CD2C6D1CB7C34100F0EFC2 /* toolbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon.png"; sourceTree = "<group>"; };
+		A7CD2C6F1CB7C9C200F0EFC2 /* extensions-folder-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "extensions-folder-icon.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		A75A32A71CB6878B00F259A5 /* extensions-sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				A7CD2C6F1CB7C9C200F0EFC2 /* extensions-folder-icon.icns */,
 				A75A32E61CB687C700F259A5 /* extensions-sandbox-icon.iconset */,
 				A75A32A81CB6878B00F259A5 /* AppDelegate.h */,
 				A75A32A91CB6878B00F259A5 /* AppDelegate.m */,
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75A32B21CB6878B00F259A5 /* Assets.xcassets in Resources */,
+				A7CD2C701CB7C9C200F0EFC2 /* extensions-folder-icon.icns in Resources */,
 				A75A32E71CB687C700F259A5 /* extensions-sandbox-icon.iconset in Resources */,
 				A75A32B51CB6878B00F259A5 /* Main.storyboard in Resources */,
 			);

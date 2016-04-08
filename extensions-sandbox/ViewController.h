@@ -11,6 +11,7 @@
 @interface ViewController : NSViewController {
     
     __weak IBOutlet NSTextField *logTextField;
+
 }
 
 

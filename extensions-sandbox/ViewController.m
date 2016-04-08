@@ -18,6 +18,7 @@
         [logTextField setStringValue:[logTextField.stringValue stringByAppendingString:[NSString stringWithFormat:@"\n%@", arg]]];
     }];
     
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {

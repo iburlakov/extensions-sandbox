@@ -12,6 +12,7 @@
     
     __weak IBOutlet NSTextField *dataToSend;
     __weak IBOutlet NSButton *sendButton;
+    
 }
 
 @end
