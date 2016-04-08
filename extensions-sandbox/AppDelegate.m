@@ -22,13 +22,30 @@
                                                         andEventID:kAEGetURL];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+NSString *pathToMonitor = @"/Users/iburlakov/experiments";
 
+
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    NSUserDefaults *defaults = [[NSUserDefaults alloc]init];
+    
+    if (![defaults boolForKey:@"isImageReseted"]) {
+        NSLog(@"Resetting folder image for %@", pathToMonitor);
+        [[NSWorkspace sharedWorkspace] setIcon:[NSImage imageNamed:@"extensions-folder-icon"]
+                                       forFile:pathToMonitor
+                                       options:0];
+        [defaults setBool:YES forKey:@"isImageReseted"];
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass
                                                                         andEventID:kAEGetURL];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
 }
 
 - (void)handleGetURLEvent:(NSAppleEventDescriptor *)event
