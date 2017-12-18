@@ -491,7 +491,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "extensions-sandbox/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -503,7 +503,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "extensions-sandbox/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -515,7 +515,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "finder-sync/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.finder-sync";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -528,7 +528,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "finder-sync/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.finder-sync";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox.finder-sync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -541,7 +541,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.share";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox.share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -554,7 +554,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iburlakov.extensions-sandbox.share";
+				PRODUCT_BUNDLE_IDENTIFIER = "extensions-sandbox.share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

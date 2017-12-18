@@ -22,6 +22,8 @@ NSString *pathToMonitor = @"/Users/iburlakov/experiments";
 - (instancetype)init {
     self = [super init];
 
+    
+    
     NSLog(@"%s launched from %@ ; compiled at %s", __PRETTY_FUNCTION__, [[NSBundle mainBundle] bundlePath], __TIME__);
 
     // Set up the directory we are syncing.

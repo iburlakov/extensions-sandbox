@@ -15,10 +15,9 @@
     [super viewDidLoad];
 
     [[SchemaChannel channel] subscribe:^(NSString *arg) {
-        [logTextField setStringValue:[logTextField.stringValue stringByAppendingString:[NSString stringWithFormat:@"\n%@", arg]]];
+        [logTextField setStringValue:[logTextField.stringValue stringByAppendingString:[NSString stringWithFormat:@"%@\n", arg]]];
     }];
-    
-    
+
 }
 
 - (void)setRepresentedObject:(id)representedObject {
